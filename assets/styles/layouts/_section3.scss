@@ -1,0 +1,88 @@
+#skills{
+    background: $grey;
+    padding: 30px 5px 10px;
+
+    @media screen  and (max-width:650px){
+        h2{
+            text-align: center;
+            padding-bottom: 20px;
+        }
+    }
+
+    .skills_content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media screen  and (max-width:650px){
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        .left_part{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
+            padding: 10px 0 10px;
+            
+            @media screen  and (max-width:650px){
+                gap: 20px;
+            }
+
+            div{
+                width: 70px;
+                height: 70px;
+                background: $white;
+                border-radius: 100%;
+                cursor: pointer;
+                @include diflex;
+
+                &:nth-child(1){
+                    background: orange;
+                }
+                &:nth-child(2){
+                    background: blue;
+                }
+                &:nth-child(3){
+                    background: rgba(255, 230, 0, 0.856);
+                }
+                &:nth-child(4){
+                    background: lightblue;
+                }
+                &:nth-child(5){
+                    background: rgb(37, 0, 204);
+                }
+
+                svg{
+                    width: 80%;
+                    height: 80%;
+                    border-radius: 100%;
+
+                    path{
+                        fill: $white;
+                    }
+                }
+
+                img{
+                    width: 80%;
+                    height: 80%;
+                    border-radius: 100%;
+                    object-fit: cover;
+                }
+            }
+
+        }
+        .right_part{
+            text-align: center;
+            img{
+                width: 60%;
+                height: auto;
+                object-fit: cover;
+
+                @media screen  and (max-width:650px){
+                    width: 40%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

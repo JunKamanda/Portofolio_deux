@@ -1,0 +1,48 @@
+#services{
+    padding: 30px 5px 10px;
+
+    h2{
+        text-align: center;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-items: stretch;
+        margin: 20px 0 10px;
+        gap: 15px;
+
+        @media screen  and (max-width:730px){
+            grid-template-columns: 1fr 1fr;
+        }
+        @media screen  and (max-width:500px){
+            grid-template-columns: 1fr;
+        }
+
+        .card{
+            background: $grey;
+            border-radius: 10px;
+            text-align: center;
+            padding: 30px 10px 4px;
+            transition: .7s ease;
+            cursor: pointer;
+
+            h3{
+                margin: 20px 0;
+            }
+            p{
+                line-height: 22px;
+                font-size: .9rem;
+            }
+
+            &:hover{
+                background: $rose;
+                
+                svg{
+                    path{
+                        fill: $white;
+                    }
+                }
+            }
+        }
+    }
+}
