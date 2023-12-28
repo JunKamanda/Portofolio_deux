@@ -133,6 +133,8 @@ button:hover {
   padding: 4px 1px;
   position: relative;
   letter-spacing: 1px;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
 }
 #header .nav ul li:after {
   content: "";
@@ -165,6 +167,12 @@ button:hover {
   -webkit-transition: width 0.4s ease;
   transition: width 0.4s ease;
 }
+#header .nav ul:hover li:not(:hover)::after {
+  width: 0;
+}
+#header .nav ul:hover li:not(:hover) a {
+  color: #f1f1f1;
+}
 @media screen and (max-width: 600px) {
   #header .nav {
     display: none;
@@ -187,7 +195,7 @@ button:hover {
   transition: 0.4s ease;
   -webkit-animation: moveTop 4s forwards;
           animation: moveTop 4s forwards;
-  opacity: 0.2;
+  opacity: 0;
   overflow: hidden;
 }
 @-webkit-keyframes moveTop {
